@@ -291,7 +291,8 @@ button.maps-link {
 }
 
 .info-card.cuando {
-    background: var(--color-secondary);
+    background: #e8e8e8;
+    color: var(--color-primary);
 }
 
 .info-card.donde {
@@ -299,7 +300,8 @@ button.maps-link {
 }
 
 .info-card.dresscode {
-    background: var(--color-accent);
+    background: #d8d8d8;
+    color: var(--color-primary);
 }
 
 .info-icon {
@@ -308,6 +310,11 @@ button.maps-link {
 
 .info-icon svg {
     stroke: var(--color-white);
+}
+
+.info-card.cuando .info-icon svg,
+.info-card.dresscode .info-icon svg {
+    stroke: var(--color-primary);
 }
 
 .info-card h3 {
