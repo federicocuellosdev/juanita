@@ -82,3 +82,26 @@ mapModal.addEventListener('click', (e) => {
     }
 });
 
+// Lazy loading para videos
+const lazyVideos = document.querySelectorAll('.lazy-video');
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target;
+            const src = video.dataset.src;
+            if (src) {
+                const source = document.createElement('source');
+                source.src = src;
+                source.type = 'video/webm';
+                video.appendChild(source);
+                video.load();
+                video.play();
+                video.setAttribute('autoplay', '');
+                videoObserver.unobserve(video);
+            }
+        }
+    });
+}, { rootMargin: '200px' });
+
+lazyVideos.forEach(video => videoObserver.observe(video));
+
