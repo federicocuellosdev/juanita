@@ -6,6 +6,10 @@
     <title>Juana - Mis 15</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="boliche.webm" as="video" type="video/webm">
+    <link rel="preload" href="brillo.webm" as="video" type="video/webm">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,13 +32,11 @@
             <p>Los Álamos 28, Puerto Manzano</p>
             <div class="map-container">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.5!2d-71.56!3d-40.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzM2LjAiUyA3McKwMzMnMzYuMCJX!5e0!3m2!1ses!2sar!4v1234567890"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-71.575%2C-40.775%2C-71.545%2C-40.745&layer=mapnik&marker=-40.76%2C-71.56"
                     width="100%"
                     height="300"
                     style="border:0; border-radius: 10px;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy">
                 </iframe>
             </div>
             <a href="https://www.google.com/maps/search/Los+Alamos+28+Puerto+Manzano" target="_blank" class="modal-btn map-external-link">Abrir en Google Maps</a>
@@ -75,7 +77,7 @@
 
     <!-- Video Section -->
     <section class="video-section">
-        <video id="boliche-video" class="video-block" autoplay muted loop playsinline>
+        <video id="boliche-video" class="video-block" autoplay muted loop playsinline preload="auto">
             <source src="boliche.webm" type="video/webm">
         </video>
     </section>
@@ -131,7 +133,7 @@
 
     <!-- Video Brillo Section -->
     <section class="video-section">
-        <video id="brillo-video" class="video-block" autoplay muted loop playsinline>
+        <video id="brillo-video" class="video-block" autoplay muted loop playsinline preload="auto">
             <source src="brillo.webm" type="video/webm">
         </video>
     </section>
