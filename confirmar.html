@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia - Juana Mis 15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+    <!-- Header -->
+    <header class="form-header">
+        <a href="index.html" class="back-link">&larr; Volver</a>
+        <h1>Confirmar Asistencia</h1>
+        <p>15 años de Juana</p>
+    </header>
+
+    <!-- Formulario -->
+    <main class="form-container">
+        <form id="confirmation-form">
+            <!-- Invitado Principal -->
+            <div class="form-section">
+                <h2>Tus datos</h2>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Tu número de teléfono">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Tu email (opcional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="restriccion">Restricción alimentaria</label>
+                    <input type="text" id="restriccion" name="restriccion" placeholder="Ej: vegetariano, celíaco, sin TACC, alergias...">
+                </div>
+            </div>
+
+            <!-- Invitados Adicionales -->
+            <div class="form-section">
+                <h2>Acompañantes</h2>
+                <p class="form-hint">Podés agregar hasta 2 acompañantes</p>
+
+                <div id="invitados-container">
+                    <!-- Los invitados adicionales se agregan aquí dinámicamente -->
+                </div>
+
+                <button type="button" id="add-guest-btn" class="add-guest-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Agregar acompañante
+                </button>
+            </div>
+
+            <!-- Mensaje opcional -->
+            <div class="form-section">
+                <h2>Mensaje (opcional)</h2>
+                <div class="form-group">
+                    <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Querés dejarnos algún mensaje?"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">Confirmar Asistencia</button>
+        </form>
+    </main>
+
+    <!-- Modal de confirmación -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>Gracias!</h2>
+            <p>Tu asistencia ha sido confirmada</p>
+            <a href="index.html" class="modal-btn">Volver a la invitación</a>
+        </div>
+    </div>
+
+    <script src="confirmar.js"></script>
+</body>
+</html>

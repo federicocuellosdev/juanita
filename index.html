@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juana - Mis 15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modal de Bienvenida -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2 id="greeting">Hola!</h2>
+            <p>Estás invitado a celebrar mis 15 años</p>
+            <button class="modal-btn" onclick="closeModal()">Ver invitación</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Juana</h1>
+            <p class="hero-subtitle">Mis 15</p>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <h2 class="section-title">Faltan</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span id="days" class="countdown-number">00</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours" class="countdown-number">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes" class="countdown-number">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds" class="countdown-number">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-card cuando">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </div>
+            <h3>Cuándo</h3>
+            <p class="info-main">11 de Abril</p>
+            <p class="info-detail">20:00 hs</p>
+        </div>
+
+        <div class="info-card donde">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </div>
+            <h3>Dónde</h3>
+            <p class="info-main">Los Álamos 28</p>
+            <p class="info-detail">Puerto Manzano</p>
+            <a href="https://www.google.com/maps/search/Los+Alamos+28+Puerto+Manzano" target="_blank" class="maps-link">Ver en Maps</a>
+        </div>
+
+        <div class="info-card dresscode">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path>
+                </svg>
+            </div>
+            <h3>Dress Code</h3>
+            <p class="info-main">Elegante Sport</p>
+        </div>
+    </section>
+
+    <!-- Mensaje Section -->
+    <section class="message-section">
+        <div class="message-content">
+            <p class="message-text">Quiero compartir este día tan especial con vos</p>
+            <p class="message-signature">Te espero!</p>
+            <p class="signature-name">Juana</p>
+        </div>
+    </section>
+
+    <!-- Confirmar Asistencia -->
+    <section class="confirm-section">
+        <h2 class="section-title">Confirmá tu asistencia</h2>
+        <p class="confirm-text">Por favor confirmá antes del 1 de Abril</p>
+        <a href="confirmar.html" class="confirm-btn">Confirmar Asistencia</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Juana Torres García</p>
+        <p class="footer-date">11 de Abril, 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
