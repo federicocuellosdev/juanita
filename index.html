@@ -20,6 +20,27 @@
         </div>
     </div>
 
+    <!-- Modal del Mapa -->
+    <div id="map-modal" class="modal hidden">
+        <div class="modal-content map-modal-content">
+            <button class="modal-close" onclick="closeMapModal()">&times;</button>
+            <h2>Ubicación</h2>
+            <p>Los Álamos 28, Puerto Manzano</p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.5!2d-71.56!3d-40.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzM2LjAiUyA3McKwMzMnMzYuMCJX!5e0!3m2!1ses!2sar!4v1234567890"
+                    width="100%"
+                    height="300"
+                    style="border:0; border-radius: 10px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <a href="https://www.google.com/maps/search/Los+Alamos+28+Puerto+Manzano" target="_blank" class="modal-btn map-external-link">Abrir en Google Maps</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -54,8 +75,8 @@
 
     <!-- Video Section -->
     <section class="video-section">
-        <video class="video-block" autoplay muted loop playsinline>
-            <source src="boliche.mp4" type="video/mp4">
+        <video id="boliche-video" class="video-block" autoplay muted loop playsinline>
+            <source src="boliche.webm" type="video/webm">
         </video>
     </section>
 
@@ -85,7 +106,7 @@
             <h3>Dónde</h3>
             <p class="info-main">Los Álamos 28</p>
             <p class="info-detail">Puerto Manzano</p>
-            <a href="https://www.google.com/maps/search/Los+Alamos+28+Puerto+Manzano" target="_blank" class="maps-link">Ver en Maps</a>
+            <button class="maps-link" onclick="openMapModal()">Ver en Maps</button>
         </div>
 
         <div class="info-card dresscode">
@@ -106,6 +127,13 @@
             <p class="message-signature">Te espero!</p>
             <p class="signature-name">Juana</p>
         </div>
+    </section>
+
+    <!-- Video Brillo Section -->
+    <section class="video-section">
+        <video id="brillo-video" class="video-block" autoplay muted loop playsinline>
+            <source src="brillo.webm" type="video/webm">
+        </video>
     </section>
 
     <!-- Confirmar Asistencia -->

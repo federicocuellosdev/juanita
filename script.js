@@ -55,8 +55,30 @@ function closeModal() {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeModal();
+        closeMapModal();
     }
 });
 
 // Prevenir scroll cuando el modal está abierto
 document.body.style.overflow = 'hidden';
+
+// Modal del Mapa
+const mapModal = document.getElementById('map-modal');
+
+function openMapModal() {
+    mapModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMapModal() {
+    mapModal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// Cerrar modal del mapa al hacer clic fuera
+mapModal.addEventListener('click', (e) => {
+    if (e.target === mapModal) {
+        closeMapModal();
+    }
+});
+
