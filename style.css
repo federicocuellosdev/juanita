@@ -5,13 +5,14 @@
 }
 
 :root {
-    --color-bg: #f9f9f9;
-    --color-primary: #64a2ad;
-    --color-secondary: #d3c199;
-    --color-accent: #e9c16a;
-    --color-accent-2: #a2d5d8;
-    --color-dark: #2c3e50;
+    --color-bg: #f5f7fa;
+    --color-primary: #1e3a5f;
+    --color-secondary: #c0c0c0;
+    --color-accent: #a8a8a8;
+    --color-accent-2: #3a5a7c;
+    --color-dark: #1a2a3a;
     --color-white: #ffffff;
+    --color-silver: #d4d4d4;
     --font-heading: 'Cardo', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -108,7 +109,7 @@ body {
 }
 
 .modal-btn:hover {
-    background: #5691a0;
+    background: #2a4a6f;
     transform: scale(1.05);
 }
 
@@ -159,7 +160,7 @@ button.maps-link {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-2) 50%, var(--color-secondary) 100%);
+    background: var(--color-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,15 +168,32 @@ button.maps-link {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+/* Video Carousel */
+.hero-video-carousel {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-video.active {
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -184,12 +202,13 @@ button.maps-link {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.6) 0%, rgba(58, 90, 124, 0.5) 50%, rgba(26, 42, 58, 0.6) 100%);
+    z-index: 1;
 }
 
 .hero-content {
     text-align: center;
-    z-index: 1;
+    z-index: 2;
     color: var(--color-white);
 }
 
@@ -257,35 +276,6 @@ button.maps-link {
     margin-top: 0.5rem;
 }
 
-/* Video Section */
-.video-section {
-    width: 100%;
-    background: var(--color-dark);
-    overflow: hidden;
-}
-
-.video-block {
-    width: 100%;
-    max-height: 80vh;
-    object-fit: cover;
-    display: block;
-}
-
-/* Video en retrato para móvil */
-@media (max-width: 768px) {
-    .video-section {
-        display: flex;
-        justify-content: center;
-    }
-
-    .video-block {
-        width: 100%;
-        height: 60vh;
-        max-height: none;
-        object-fit: cover;
-        object-position: center;
-    }
-}
 
 /* Info Section */
 .info-section {
@@ -414,7 +404,7 @@ button.maps-link {
 }
 
 .confirm-btn:hover {
-    background: #5691a0;
+    background: #2a4a6f;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(100, 162, 173, 0.4);
 }
@@ -678,7 +668,7 @@ button.maps-link {
 }
 
 .submit-btn:hover {
-    background: #5691a0;
+    background: #2a4a6f;
     transform: translateY(-2px);
 }
 

@@ -82,26 +82,22 @@ mapModal.addEventListener('click', (e) => {
     }
 });
 
-// Lazy loading para videos
-const lazyVideos = document.querySelectorAll('.lazy-video');
-const videoObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const video = entry.target;
-            const src = video.dataset.src;
-            if (src) {
-                const source = document.createElement('source');
-                source.src = src;
-                source.type = 'video/webm';
-                video.appendChild(source);
-                video.load();
-                video.play();
-                video.setAttribute('autoplay', '');
-                videoObserver.unobserve(video);
-            }
-        }
-    });
-}, { rootMargin: '200px' });
+// Video Carousel en Hero
+const heroVideos = document.querySelectorAll('.hero-video');
+let currentVideoIndex = 0;
 
-lazyVideos.forEach(video => videoObserver.observe(video));
+function switchVideo() {
+    heroVideos[currentVideoIndex].classList.remove('active');
+    heroVideos[currentVideoIndex].pause();
+
+    currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
+
+    heroVideos[currentVideoIndex].classList.add('active');
+    heroVideos[currentVideoIndex].play();
+}
+
+// Cambiar video cada 8 segundos
+if (heroVideos.length > 1) {
+    setInterval(switchVideo, 8000);
+}
 
