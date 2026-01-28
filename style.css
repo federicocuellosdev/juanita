@@ -214,6 +214,19 @@ body {
     margin-top: 0.5rem;
 }
 
+/* Video Section */
+.video-section {
+    width: 100%;
+    background: var(--color-dark);
+}
+
+.video-block {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;
+}
+
 /* Info Section */
 .info-section {
     display: grid;
