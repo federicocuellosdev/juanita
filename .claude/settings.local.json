@@ -4,7 +4,8 @@
       "WebFetch(domain:odiluna15.com.ar)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(git log:*)"
     ]
   }
 }

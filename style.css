@@ -384,8 +384,9 @@ button.maps-link {
 }
 
 .colors-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
     max-width: 500px;
     margin: 0 auto 2rem;
@@ -393,8 +394,8 @@ button.maps-link {
 }
 
 .color-circle {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -417,15 +418,23 @@ button.maps-link {
 
 @media (max-width: 768px) {
     .colors-grid {
-        grid-template-columns: repeat(5, 1fr);
         gap: 0.8rem;
+    }
+
+    .color-circle {
+        width: 50px;
+        height: 50px;
     }
 }
 
 @media (max-width: 480px) {
     .colors-grid {
-        grid-template-columns: repeat(4, 1fr);
         gap: 0.6rem;
+    }
+
+    .color-circle {
+        width: 45px;
+        height: 45px;
     }
 
     .colors-section {
