@@ -1,5 +1,5 @@
 // Configuración de la API
-const API_URL = 'https://patagonica-api.onrender.com/api/juanita/confirmar'; // Ajustar según el dominio real
+const API_URL = 'https://patagonica.onrender.com/api/juanita/confirmar'; // Ajustar según el dominio real
 
 // Elementos
 const form = document.getElementById('confirmation-form');
